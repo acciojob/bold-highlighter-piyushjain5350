@@ -9,8 +9,9 @@ function highlight() {
     }
 }
 
-const para=document.getElementByTagName("p")[0];
+const para=document.getElementsByTagName("p")[0];
 para.addEventListener("mouseover",highlight);
+console.log(para);
 
 function return_normal() {
     //Write your code here
@@ -21,4 +22,4 @@ function return_normal() {
     }
 	
 }
-para.addEventListener("mouseout",remove_normal);
+para.addEventListener("mouseout",return_normal);
