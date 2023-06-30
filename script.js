@@ -1,13 +1,12 @@
 function highlight() {
     //Write your code here
-	const target=document.getElementsByTagName("strong");
+	const target=document.getElementsByTagName('strong');
+	console.log(target)
 	
-	const targetArray = Array.from(target); // Convert HTMLCollection to array
-    
-    targetArray.forEach((element) => {
-        element.classList.add("color-change")
-    });
-
+	// const targetArray = Array.from(target); // Convert HTMLCollection to array
+	for (let i = 0; i < target.length; i++) {
+         target[i].style.color = 'green';
+    }
 }
 
 const para=document.getElementByTagName("p")[0];
@@ -16,11 +15,10 @@ para.addEventListener("mouseover",highlight);
 function return_normal() {
     //Write your code here
 	const target=document.getElementsByTagName("strong");
+
+	for (let i = 0; i < target.length; i++) {
+         target[i].style.color = 'black';
+    }
 	
-	const targetArray = Array.from(target); 
-    
-    targetArray.forEach((element) => {
-        element.classList.remove("color-change")
-    }); 
 }
 para.addEventListener("mouseout",remove_normal);
