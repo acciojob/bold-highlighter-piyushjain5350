@@ -11,7 +11,7 @@ function highlight() {
 }
 
 const para=document.getElementByTagName("p")[0];
-para.addEventListener("hover",highlight());
+para.addEventListener("mouseover",highlight());
 
 function return_normal() {
     //Write your code here
